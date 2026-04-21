@@ -1,0 +1,67 @@
+{
+  "_comment": "通用 MSIX 打包工具配置文件 — 每次打包新软件只需修改此文件",
+
+  "app": {
+    "name":            "SublimeText",
+    "displayName":     "Sublime Text",
+    "description":     "Sublime Text - Sophisticated text editor for code",
+    "publisher":       "CN=SelfSigned",
+    "publisherDisplay":"Sublime HQ Pty Ltd",
+    "version":         "4200.0.0.0",
+    "executable":      "Sublime Text\\sublime_text.exe",
+    "arch":            "x64"
+  },
+
+  "icon": {
+    "sourceExe":       "C:\\Program Files\\Sublime Text\\sublime_text.exe",
+    "sourcePng":       "",
+    "bgColor":         "auto",
+    "_bgColorNote":    "auto=从exe提取背景色; 或填 #1E1E1E 等十六进制色值",
+    "logoColor":       "auto",
+    "_logoColorNote":  "auto=从exe提取主色; 或填 #FD971F 等十六进制色值"
+  },
+
+  "cert": {
+    "subject":         "CN=SelfSigned",
+    "password":        "YourPassword123",
+    "validYears":      10,
+    "_note":           "证书自动生成并安装到 CurrentUser\\Root，无需管理员权限"
+  },
+
+  "fileTypes": {
+    "enabled": true,
+    "groups": [
+      {
+        "name": "codeeditor",
+        "extensions": [
+          ".py",".js",".ts",".jsx",".tsx",".vue",
+          ".java",".c",".cpp",".h",".hpp",".cs",
+          ".go",".rs",".rb",".php",".swift",".kt",
+          ".lua",".pl",".sh",".bash",".zsh",".ps1",
+          ".html",".htm",".css",".scss",".sass",".less",
+          ".xml",".json",".jsonc",".yaml",".yml",".toml",
+          ".md",".markdown",".rst",".tex",
+          ".ini",".cfg",".conf",".properties",".env",
+          ".sql",".dockerfile",".j2",".jinja",".jinja2",
+          ".gitignore",".editorconfig"
+        ]
+      },
+      {
+        "name": "textfile",
+        "extensions": [".txt",".log"]
+      }
+    ]
+  },
+
+  "tile": {
+    "backgroundColor": "#1E1E1E",
+    "_note":           "开始菜单磁贴背景色，建议与图标背景色一致"
+  },
+
+  "output": {
+    "dir":             "",
+    "_dirNote":        "留空则输出到脚本同目录; 或填绝对路径",
+    "autoInstall":     true,
+    "keepPackageDir":  false
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "_comment": "Sublime Text 打包配置 — 直接运行 make_msix.ps1 即可",
+
+  "app": {
+    "name":            "SublimeText",
+    "displayName":     "Sublime Text",
+    "description":     "Sublime Text - Sophisticated text editor for code",
+    "publisher":       "CN=SelfSigned",
+    "publisherDisplay":"Sublime HQ Pty Ltd",
+    "version":         "4200.0.0.0",
+    "executable":      "Sublime Text\\sublime_text.exe",
+    "arch":            "x64"
+  },
+
+  "icon": {
+    "sourceExe":       "C:\\Program Files\\Sublime Text\\sublime_text.exe",
+    "sourcePng":       "",
+    "bgColor":         "auto",
+    "logoColor":       "auto"
+  },
+
+  "cert": {
+    "subject":         "CN=SelfSigned",
+    "password":        "YourPassword123",
+    "validYears":      10
+  },
+
+  "fileTypes": {
+    "enabled": true,
+    "groups": [
+      {
+        "name": "codeeditor",
+        "extensions": [
+          ".py",".js",".ts",".jsx",".tsx",".vue",
+          ".java",".c",".cpp",".h",".hpp",".cs",
+          ".go",".rs",".rb",".php",".swift",".kt",
+          ".lua",".pl",".sh",".bash",".zsh",".ps1",
+          ".html",".htm",".css",".scss",".sass",".less",
+          ".xml",".json",".jsonc",".yaml",".yml",".toml",
+          ".md",".markdown",".rst",".tex",
+          ".ini",".cfg",".conf",".properties",".env",
+          ".sql",".dockerfile",".j2",".jinja",".jinja2",
+          ".gitignore",".editorconfig"
+        ]
+      },
+      {
+        "name": "textfile",
+        "extensions": [".txt",".log"]
+      }
+    ]
+  },
+
+  "tile": {
+    "backgroundColor": "#1E1E1E"
+  },
+
+  "output": {
+    "dir":             "",
+    "autoInstall":     true,
+    "keepPackageDir":  false
+  }
+}
